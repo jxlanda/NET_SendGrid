@@ -33,4 +33,11 @@ namespace NET_SendGrid.Models
             Attachments = attachments;
         }
     }
+
+    public class EmailMessageDTO
+    {
+        public List<string>? To { get; set; }
+        public string? Subject { get; set; }
+        public string? Content { get; set; }
+    }
 }

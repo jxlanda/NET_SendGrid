@@ -53,7 +53,7 @@ namespace NET_SendGrid.Services
             }
 
             List<EmailAddress> emails = new();
-            message.To.ForEach(x => emails.Add(new EmailAddress { Name = x.Name, Email = x.Address }));
+            message?.To?.ForEach(x => emails.Add(new EmailAddress { Name = x.Name, Email = x.Address }));
 
             msg.AddTos(emails);
 
